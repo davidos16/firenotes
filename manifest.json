@@ -1,0 +1,7 @@
+{
+  "name": "Fire Notes",
+  "short_name": "Fire Notes",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "orientation": "portrait"
+}
