@@ -16,7 +16,7 @@ class FireNotesApp {
     this.addNoteButton.addEventListener('click', () => this.saveNote());
     
     //Toggle for button
-    this.addNoteButton.addEventListener('keyup', () => this.toggleButton());
+    this.noteMessageInput.addEventListener('keyup', () => this.toggleButton());
     
     // Loads notes
     for (let key in localStorage) {
@@ -30,8 +30,7 @@ class FireNotesApp {
     
         // Saves note to local storage 
     saveNote() {
-        if (this.noteMessageInput.vale) {
-            
+        if (this.noteMessageInput.value) {
             let key = Date.now().toString();
             localStorage.setItem(key, this.noteMessageInput.value);
             this.displayNote(key, this.noteMessageInput.value);
@@ -56,7 +55,7 @@ class FireNotesApp {
         let note = document.getElementById(key);
         // If no element with key, create a new one 
         if (!note) {
-            note = document.createElement('sticky-note');
+            note = document.createElement('fire-note');
             note.id = key;
             this.notesContainer.insertBefore(note, this.notesSectionTitle.nextSibling);
         }
@@ -144,5 +143,5 @@ class FireNote extends HTMLElement {
     
 
 
-document.registerElement('fire-note', FireNote)
+document.registerElement('fire-note', FireNote);
 // end of file 
