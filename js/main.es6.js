@@ -20,7 +20,7 @@ class FireNotesApp {
     
     // Loads notes
     for (let key in localStorage) {
-        this.displayNote(key, localStorage[key]);
+      this.displayNote(key, localStorage[key]);
     }
     
     // Listen for updates on other windows
@@ -89,7 +89,7 @@ class FireNote extends HTMLElement {
     createdCallback() {
         this.classList.add(...FireNote.CLASSES);
         this.innerHTML = FireNote.TEMPLATE;
-        this.messageElement = this.querySelector('.messsage');
+        this.messageElement = this.querySelector('.message');
         this.dateElement = this.querySelector('.date');
         this.deleteButton = this.querySelector('.delete');
         this.deleteButton.addEventListener('click', () => this.deleteNote());
@@ -110,8 +110,8 @@ class FireNote extends HTMLElement {
             // Format Date 
             
             let dateFormatterOptions = {day: 'numeric', month: 'short'};
-            let shortDate = new intl.DateTimeFormat("en-US", dateFormatterOptions).format(date);
-            this.dateElement.textContent = `Created p ${shortDate}`;
+            let shortDate = new Intl.DateTimeFormat("en-US", dateFormatterOptions).format(date);
+            this.dateElement.textContent = `Created on ${shortDate}`;
         }
     }
     
@@ -119,9 +119,8 @@ class FireNote extends HTMLElement {
     setMessage(message) {
         this.messageElement.textContent = message;
         // Replace all line breaks
-        this.messageElement.innerHTML = this.messageElement.innerHTML.replace(/\n/g, '<br>');
-        
-    }
+      this.messageElement.innerHTML = this.messageElement.innerHTML.replace(/\n/g, '<br>');
+  }
     
     // Deletes the note by removing the element
     deleteNote() {
@@ -130,7 +129,7 @@ class FireNote extends HTMLElement {
         }
     }
     // Initial content of the element
-    FireNote.TEMPLATE =  `
+    FireNote.TEMPLATE = `
     <div class="message"></div>
     <div class="date"></div>
     <button class="delete mdl-button mdl-js-button mdl-js-ripple-effect">

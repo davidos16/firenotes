@@ -29,6 +29,7 @@ html, body {
   min-height: 0;
 }
 .message {
+  color: #151515;
   font-size: 28px;
   line-height: 32px;
   font-weight: 200;
