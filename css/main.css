@@ -29,9 +29,9 @@ html, body {
   min-height: 0;
 }
 .message {
-  color: #151515;
-  font-size: 28px;
-  line-height: 32px;
+  color: #fff;
+  font-size:20px;
+  line-height: 20px;
   font-weight: 200;
   padding-bottom: 30px;
 }
@@ -63,6 +63,56 @@ html, body {
   background: linear-gradient(white, #f9f9f9);
 }
 .sticky-note {
-  background: linear-gradient(#FFF93A, #FFFC9E);
+  background: linear-gradient(#ff6666, #ff3333);
   min-height:250px;
+}
+
+.mdl-layout__header {
+  
+  
+}
+.mdl-layout__header-row {
+    background-color: #ff6666;
+}
+
+header .mdl-layout__header {
+    background-color: #fff !important;
+}
+
+.mdl-color--primary {
+background-color:rgb(255, 102, 102)!important
+}
+
+.mdl-card__media{
+  background-color: #fff;
+}
+
+.mdl-card {
+  background-color: #fff !important;
+}
+
+.mdl-color--blue-grey-200 {
+    background-color: #ffe6e6 !important;
+}
+
+
+::-moz-selection {
+    background: #ffe6e6;
+    text-shadow: none
+}
+
+::selection {
+    background: #ffe6e6;
+    text-shadow: none
+}
+
+.mdl-textfield--floating-label.is-focused .mdl-textfield__label,.mdl-textfield--floating-label.is-dirty .mdl-textfield__label {
+    color: #ff6666;
+    font-size: 12px;
+    top: 4px;
+    visibility: visible
+}
+
+.mdl-textfield__label:after {
+    background-color: #ff6666;
 }
